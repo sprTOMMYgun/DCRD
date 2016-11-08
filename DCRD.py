@@ -17,6 +17,8 @@ def main_menu():
     print ("74 65 73 74 20 74 65 78 74 DA")
     print ("(3) Ceaser Shift")
     print ("grfg zrffntr")
+    print ("(4) Base64")
+    print ("dGVzdA==")
 
     choice = input("> ");
 
@@ -26,10 +28,12 @@ def main_menu():
         hexdecimal()
     if "3" in choice:
         shift()
+    if "4" in choice:
+        base64()
     else:
         main_menu()
 
-#Binary
+# Binary
 # https://stackoverflow.com/questions/7396849/
 
 def binary():
@@ -184,6 +188,16 @@ def bruteforceshift():
 
     reboot("You will be redirected to the reboot menu")
 
+# BASE64
+#
+def base64():
+    import base64
+    print("Please input your string")
+    choice = input("> ")
+    a = base64.b64decode(choice)
+    print (a)
+
+    reboot("You will be redirected to the reboot menu")
 # START
 def start():
     main_menu()
