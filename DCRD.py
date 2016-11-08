@@ -19,6 +19,8 @@ def main_menu():
     print ("grfg zrffntr")
     print ("(4) Base64")
     print ("dGVzdA==")
+    print ("(5) Reverse")
+    print ("racecar")
 
     choice = input("> ");
 
@@ -30,6 +32,8 @@ def main_menu():
         shift()
     if "4" in choice:
         base64()
+    if "5" in choice:
+        reverse()
     else:
         main_menu()
 
@@ -189,7 +193,7 @@ def bruteforceshift():
     reboot("You will be redirected to the reboot menu")
 
 # BASE64
-#
+# a kind anon on /dpt/
 def base64():
     import base64
     print("Please input your string")
@@ -198,6 +202,16 @@ def base64():
     print (a)
 
     reboot("You will be redirected to the reboot menu")
+
+# Reverse
+# https://reddit.com/r/dailyprogrammer/comments/45w6ad/
+def reverse():
+    print("Please input your string")
+    choice = input("> ")
+    a = choice[::-1]
+    print (a)
+    reboot("You will be redirected to the reboot menu")
+
 # START
 def start():
     main_menu()
