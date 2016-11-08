@@ -13,12 +13,15 @@ def main_menu():
     print ("Please enter your choice")
     print ("(1) Binary")
     print ("01110100 01100101 01110011 01110100")
-
+    print ("(2) Hexdecimal") 
+    print ("74 65 73 74 20 74 65 78 74 DA")
 
     choice = input("> ");
 
     if "1" in choice:
         binary()
+    if "2" in choice:
+        hexdecimal()
     else:
         main_menu()
 
@@ -35,6 +38,19 @@ def binary():
     print (b)
     reboot("You will be redirected to the reboot menu")
 
+# Hexdecimal
+# https://stackoverflow.com/questions/3283984/
+
+def hexdecimal():
+    print ("You can uses spaces or no spaces")
+    print ("DO NOT USE DASHES")
+    print ("Please enter your string")
+
+    choice = input("> ");
+
+    a = bytes.fromhex(choice).decode('ascii')
+    print (a)
+    reboot("You will be redirected to the reboot menu")
  
 # START
 def start():
